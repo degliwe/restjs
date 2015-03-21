@@ -49,20 +49,20 @@
     }
 
     function _buildUrl(path, params) {
-        this.path = (path != null) ? "/" + path : "";
-        this.params = params || undefined;
+        path = (path != null) ? "/" + path : "";
+        params = params || undefined;
         var param = "";
 
-        if (this.params != undefined) {
+        if (params != undefined) {
             param = "?";
             var i = 0;
-            for (var key in this.params) {
+            for (var key in params) {
                 if (i>0) param+= "&";
-                param = param + key + "=" + this.params[key];
+                param = param + key + "=" + params[key];
                 i++;
             }
         }
-        return protocol + baseUrl + endpoint + this.path + param;
+        return protocol + baseUrl + endpoint + path + param;
     }
 
 })(this.REST = {});
