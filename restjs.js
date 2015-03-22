@@ -6,6 +6,8 @@
         baseUrl = config.baseUrl + "/";
         endpoint = config.endpoint;
         protocol = config.protocol + "://";
+
+        return this;
     };
     exports.fetch = function (path, params) {
         return new Promise(function(resolve, reject) {

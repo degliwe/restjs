@@ -1,6 +1,5 @@
 // Create a service object
-var jsonService = Object.create(REST);
-jsonService.init({
+var jsonService = Object.create(REST).init({
     "protocol": "http",
     "baseUrl": "localhost:5984",
     "endpoint": "restjs"
