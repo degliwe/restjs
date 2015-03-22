@@ -1,17 +1,14 @@
 # restjs
 minimal js lib to use REST services asynchronously with promises and zero dependencies
 
-
-
 ```javascript
-var jsonService = Object.create(REST);
-jsonService.init({
+var jsonService = Object.create(REST).init({
     "protocol": "http",
     "baseUrl": "localhost",
     "endpoint": "document"
 });
 ```
-First we need to create and configure our resource by provideing protocol (optional), baseurl (optional) and endpoint.
+First we need to create and configure our resource by providing protocol (optional), baseurl (optional) and endpoint.
 
 ```javascript
 var doc = {"title": "this is my title", "body": "this is my body"};
